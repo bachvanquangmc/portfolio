@@ -41,8 +41,14 @@ export default function Card() {
     
       <CardCont background={global_theme[theme].card}>
       <h1 style={{fontFamily:"'EB Garamond', serif"}}>Visit ...</h1>
+      <a href="https://medordoc-seven.vercel.app/" target="_blank" rel="noreferrer">
+
       <Btn title='Website'/>
+      </a>
+      <a href="https://github.com/bachvanquangmc/medordoc/" target="_blank" rel="noreferrer">
+
       <Btn title='Github'/>
+      </a>
       </CardCont>
     </div>
   }

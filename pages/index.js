@@ -132,7 +132,7 @@ export default function Home({
     <MainCont f={global_theme[theme].f} s={global_theme[theme].s}>
       <NavBar/>
       <section style={{marginTop:"3rem"}}>
-        <Header fFamily="Roboto-Regular" title={"Hi,I’m Quang"} color={global_theme[theme].hi} fSize={5} spacing={1.5}/>
+        <Header fFamily="Roboto-Regular" title={"Hi,I am Quang"} color={global_theme[theme].hi} fSize={5} spacing={1.5}/>
         <Text>
           <p>A Front End Developer with a passion for building user friendly cross-platform apllications</p>
         </Text>
@@ -193,8 +193,8 @@ export default function Home({
           <p style={{cursor:"pointer"}} onClick={()=>router.push("/terms")}>Terms of Use</p>
           <p style={{cursor:"pointer"}} onClick={()=>router.push("/policy")}>Privacy Policy</p>        </div>
         <div style={{cursor:"pointer", display:"flex", flexDirection:"column", gap:"1rem"}}>
-          <a href="https://www.linkedin.com/in/quang-bach/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/bachvanquangmc" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/quang-bach/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/bachvanquangmc" target="_blank" rel="noreferrer">GitHub</a>
           <a href = "mailto:bachvanquangmc@gmail.com?subject = Feedback&body = Message">Email</a>
         </div>
       </Footer>

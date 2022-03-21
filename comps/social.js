@@ -35,12 +35,12 @@ export default function Social({
 
   return (
     <MainCont>
-        <a href="https://www.linkedin.com/in/quang-bach/" target="_blank">
+        <a href="https://www.linkedin.com/in/quang-bach/" target="_blank" rel="noreferrer">
           <Card background="#373351">
           <MyImage src='/linkedIn.svg'/>
           </Card>
         </a>
-        <a href="https://github.com/bachvanquangmc" target="_blank">
+        <a href="https://github.com/bachvanquangmc" target="_blank" rel="noreferrer">
           <Card background="#373351">
             <MyImage src='/github.svg'/>
           </Card>
