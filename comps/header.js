@@ -6,15 +6,17 @@ font-size: ${props => props.fSize}rem;
 color: ${props => props.color};
 padding: 2rem;
 letter-spacing: ${props => props.spacing}rem;
+font-family: ${props => props.fFamily};
 `
 export default function Header({
   title = "Header",
   fSize = "3",
   color = "#fff",
-  spacing = 0
+  spacing = 0,
+  fFamily = "'EB Garamond', serif"
 }) {
   return (
-    <HeaderCont fSize={fSize} color={color} spacing={spacing}>
+    <HeaderCont fFamily={fFamily} fSize={fSize} color={color} spacing={spacing}>
       {title}
     </HeaderCont>
   )

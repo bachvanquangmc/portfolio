@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 // import {NavLink as Link} from 'react-router-dom'
 import {FaBars} from 'react-icons/fa'
+import Social from './social'
+import { useRouter } from "next/router";
+import { global_theme } from '../utils/variables'
+import { useTheme } from "../utils/provider";
+
 
 const MainCont = styled.nav`
 height: 80px;
@@ -9,10 +14,9 @@ display: flex;
 justify-content: space-between;
 padding: 0.5rem calc((100vw - 1000px) / 2);
 z-index:10;
-
+font-family: Celebes-Regular;
 `
 const NavLink = styled.div`
-color: #fff;
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -27,7 +31,6 @@ cursor: pointer;
 const Bars = styled(FaBars)`
 display: none;
 color: #fff;
-
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
@@ -74,22 +77,24 @@ text-decoration: none;
  }
 `
 function NavBar() {
+  const router = useRouter();
+  const { theme, setTheme } = useTheme();
   return (
     <MainCont>
       <NavLink to='/'>
-        <h1>Quang Bach</h1>
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center", marginTop:25}}>
+          <p style={{fontSize:22}} onClick={()=>router.push("/")}>Quang Bach</p>
+          <p style={{marginTop:-15, color:`${global_theme[theme].title}`, fontFamily:"Roboto-Light", letterSpacing:6}}>Front End Developer</p>
+        </div>
       </NavLink>
       <Bars/>
-      <NavMenu>
+      {/* <NavMenu>
+      </NavMenu> */}
+      <NavBtn>
         <NavLink to='/work' activeStyle>
           Work
         </NavLink>
-        <NavLink to='/contact' activeStyle>
-          Contact
-        </NavLink>
-      </NavMenu>
-      <NavBtn>
-        <NavBtnLink to='/signin'>Dark Mode</NavBtnLink>
+        <Social/>
       </NavBtn>
     </MainCont>
   )
